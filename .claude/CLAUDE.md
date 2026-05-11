@@ -22,18 +22,20 @@ Each phase runs in its own Claude Code session. Sessions are never carried over 
 
 - `analysis.md` — scope document produced by Sage or Scholar; constrains all downstream agents
 - `preparation-plan.md` — exhaustive implementation contract produced by Architect
-- `ISSUES.md` — escalation log; written only after the interview protocol has been attempted
+- `ISSUES.md` — escalation log for planning and implementation blockers
 
 ## Interview Protocol
 
-Before any agent writes to `ISSUES.md`, it **must** enter interview mode:
+All agents resolve blockers through conversation before any other action.
+
+**Sage and Scholar** — analysis blockers are resolved through interview only. They never write to `ISSUES.md`. If the user cannot provide missing information, the analysis is produced with uncertain areas marked `⚠ Uncertain`.
+
+**Architect, Craftsman, Apprentice** — planning and implementation blockers follow the full protocol:
 
 1. State the issue clearly
 2. Ask the user 1–3 targeted questions that could resolve it
 3. Offer an explicit exit: *"Reply SKIP if you don't have this information right now and I will log it to ISSUES.md."*
 4. If the user replies SKIP, has no answer, or does not respond — write to `ISSUES.md` and halt
-
-This protocol applies to every guild member without exception.
 
 ## ISSUES.md Entry Format
 
