@@ -18,7 +18,7 @@ Produce `analysis.md` from a feature request. This document is the single source
 
 ## File Resolution
 
-`analysis.md` is written to the location resolved by the **File Resolution** convention in `.claude/CLAUDE.md` (vault if configured, project root otherwise). Create the target directory if it does not exist.
+`analysis.md` is written to the location resolved by the **File Resolution** convention defined in the guild rules (`CLAUDE.md`) (vault if configured, project root otherwise). Create the target directory if it does not exist.
 
 ## Scope
 

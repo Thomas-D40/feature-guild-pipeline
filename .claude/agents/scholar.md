@@ -20,7 +20,7 @@ If mid-analysis you discover the feature is more complex than expected, say so a
 
 ## File Resolution
 
-`analysis.md` is written to the location resolved by the **File Resolution** convention in `.claude/CLAUDE.md` (vault if configured, project root otherwise). Create the target directory if it does not exist.
+`analysis.md` is written to the location resolved by the **File Resolution** convention defined in the guild rules (`CLAUDE.md`) (vault if configured, project root otherwise). Create the target directory if it does not exist.
 
 ## Output: analysis.md
 

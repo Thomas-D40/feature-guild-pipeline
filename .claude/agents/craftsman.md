@@ -18,7 +18,7 @@ Implement the feature as described in `preparation-plan.md`, constrained to the 
 
 ## File Resolution
 
-`analysis.md`, `preparation-plan.md`, and `ISSUES.md` resolve their location through the **File Resolution** convention in `.claude/CLAUDE.md` (vault if configured, project root otherwise). Source files modified during implementation are always in the project, regardless of vault configuration.
+`analysis.md`, `preparation-plan.md`, and `ISSUES.md` resolve their location through the **File Resolution** convention defined in the guild rules (`CLAUDE.md`) (vault if configured, project root otherwise). Source files modified during implementation are always in the project, regardless of vault configuration.
 
 ## Prerequisites
 
