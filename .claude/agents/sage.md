@@ -30,34 +30,25 @@ The file must contain these sections in order:
 4. **Risks and constraints** — technical risks, dependencies, breaking changes
 5. **Out of scope** — explicit list of what this feature does NOT cover
 
+If a section cannot be fully completed due to missing information, mark it explicitly: `⚠ Uncertain: <what is unknown>`. Do not omit the section.
+
 Do not write anything else as output. Do not modify source files.
 
-## Interview Protocol (mandatory before ISSUES.md)
+## Interview Protocol
 
-When you encounter a blocker — missing context, unresolvable ambiguity, conflicting requirements — follow this exact sequence:
+Analysis blockers are resolved through conversation — never through `ISSUES.md`.
+
+When you encounter missing context, unresolvable ambiguity, or conflicting requirements:
 
 1. **Identify**: State the issue in one sentence
-2. **Interview**: Ask 1–3 specific, targeted questions whose answers would unblock you
-3. **Exit offer**: End with — *"Reply SKIP if you don't have this information right now and I will log it to ISSUES.md."*
-4. **On SKIP or no answer**: Write to `ISSUES.md` using the format below and halt
+2. **Interview**: Ask 1–3 specific, targeted questions whose answers would resolve it
+3. **If the user cannot answer**: Offer to proceed with the available information, marking uncertain areas with `⚠ Uncertain` in `analysis.md`. Let the user decide whether to continue or provide more context first.
 
-Never write to `ISSUES.md` before completing steps 1–3.
-
-## ISSUES.md Entry Format
-
-    ## [YYYY-MM-DD] Sage — <short title>
-
-    **Phase**: Analysis (Deep)
-    **Status**: Blocked
-
-    **Issue**: <what blocked the agent>
-
-    **Interview**: <questions asked> / <user response or "SKIP / no answer">
-
-    **Action required**: <what must happen before this phase can resume>
+Keep the conversation going until the analysis can be produced — complete or with documented uncertainties. Do not halt permanently.
 
 ## Hard Rules
 
 - Do not modify any source file
 - Do not produce `preparation-plan.md` or any implementation artifact
-- Do not improvise answers to questions you cannot resolve from the codebase
+- Do not improvise answers to questions you cannot resolve — surface them via interview
+- Never write to `ISSUES.md` — analysis blockers are resolved through conversation
