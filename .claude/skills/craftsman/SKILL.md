@@ -1,15 +1,19 @@
-# Skill: implement
+---
+description: Invoke the Craftsman agent to implement the feature described in preparation-plan.md, applying judgment where the plan meets real code. Use when implementation requires adapting code, resolving minor conflicts, or making structural decisions within scope — prefer /apprentice for purely mechanical tasks. Triggers include "implement", "build the feature", "craftsman", "execute the plan".
+---
+
+# Skill: craftsman
 
 Invokes the **Craftsman** agent to implement the feature as described in `preparation-plan.md`.
 
 ## When to use
 
-Use `/implement` when the implementation requires judgment — adapting plan code to actual code state, resolving minor conflicts, making structural decisions within scope. For purely mechanical tasks, use `/implement-simple` instead (Apprentice, Haiku).
+Use `/craftsman` when the implementation requires judgment — adapting plan code to actual code state, resolving minor conflicts, making structural decisions within scope. For purely mechanical tasks, use `/apprentice` instead (Apprentice, Haiku).
 
 ## Usage
 
 ```
-/implement
+/craftsman
 ```
 
 No arguments required. Craftsman reads `analysis.md` and `preparation-plan.md` automatically.

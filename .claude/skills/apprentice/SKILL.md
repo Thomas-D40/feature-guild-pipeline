@@ -1,15 +1,19 @@
-# Skill: implement-simple
+---
+description: Invoke the Apprentice agent for mechanical, pattern-following implementation of a fully self-contained preparation-plan.md. Use only when every step has complete copy-pasteable code and zero judgment is required — prefer /craftsman in any doubt. Triggers include "simple implement", "mechanical implementation", "apprentice", "apply the plan as-is".
+---
+
+# Skill: apprentice
 
 Invokes the **Apprentice** agent for mechanical, pattern-following implementation.
 
 ## When to use
 
-Use `/implement-simple` only when `preparation-plan.md` is fully self-contained and requires zero interpretation — every step has complete, copy-pasteable code and no decision-making is needed. If in doubt, use `/implement` (Craftsman, Sonnet) instead.
+Use `/apprentice` only when `preparation-plan.md` is fully self-contained and requires zero interpretation — every step has complete, copy-pasteable code and no decision-making is needed. If in doubt, use `/craftsman` (Craftsman, Sonnet) instead.
 
 ## Usage
 
 ```
-/implement-simple
+/apprentice
 ```
 
 No arguments required. Apprentice reads `analysis.md` and `preparation-plan.md` automatically.
@@ -30,6 +34,6 @@ No arguments required. Apprentice reads `analysis.md` and `preparation-plan.md` 
 
 ## Notes
 
-- If Apprentice says "This task requires Craftsman, not Apprentice", switch to `/implement`
+- If Apprentice says "This task requires Craftsman, not Apprentice", switch to `/craftsman`
 - Check `ISSUES.md` after the run — if Apprentice was blocked, it will have written there and not committed
 - Partial commits are never made when blocked

@@ -1,6 +1,6 @@
 ---
 name: Scholar
-description: Light analysis agent for straightforward feature requests. Produces analysis.md. Invoked via /analyse.
+description: Light analysis agent for straightforward feature requests. Produces analysis.md. Invoked via /scholar.
 model: claude-sonnet-4-6
 ---
 
@@ -16,7 +16,7 @@ Always respond in the language the user is writing in.
 
 Produce `analysis.md` from a straightforward feature request. Limit your exploration to files directly relevant to the feature — do not read the entire codebase.
 
-If mid-analysis you discover the feature is more complex than expected, say so and recommend the user re-run with `/analyse-deep` instead.
+If mid-analysis you discover the feature is more complex than expected, say so and recommend the user re-run with `/sage` instead.
 
 ## File Resolution
 

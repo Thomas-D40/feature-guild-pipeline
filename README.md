@@ -20,11 +20,11 @@ Claude Code is powerful but unconstrained by default. Without structure:
 
 | Member | Command | Model | Role |
 |--------|---------|-------|------|
-| **Sage** | `/analyse-deep` | Opus | Deep analysis for complex features |
-| **Scholar** | `/analyse` | Sonnet | Light analysis for straightforward features |
-| **Architect** | `/prep-plan` | Sonnet | Transforms analysis into an implementation plan |
-| **Craftsman** | `/implement` | Sonnet | Implementation requiring judgment |
-| **Apprentice** | `/implement-simple` | Haiku | Mechanical, pattern-following implementation |
+| **Sage** | `/sage` | Opus | Deep analysis for complex features |
+| **Scholar** | `/scholar` | Sonnet | Light analysis for straightforward features |
+| **Architect** | `/architect` | Sonnet | Transforms analysis into an implementation plan |
+| **Craftsman** | `/craftsman` | Sonnet | Implementation requiring judgment |
+| **Apprentice** | `/apprentice` | Haiku | Mechanical, pattern-following implementation |
 | **Scribe** | `/scribe` | Sonnet | Feature specification for team-wide documentation |
 | **Herald** | `/herald` | Sonnet | Coherence check + concise PR description |
 
@@ -102,11 +102,11 @@ Your global Claude config directory should contain:
 │   ├── scribe.md
 │   └── herald.md
 ├── skills/
-│   ├── analyse-deep/SKILL.md
-│   ├── analyse/SKILL.md
-│   ├── prep-plan/SKILL.md
-│   ├── implement/SKILL.md
-│   ├── implement-simple/SKILL.md
+│   ├── sage/SKILL.md
+│   ├── scholar/SKILL.md
+│   ├── architect/SKILL.md
+│   ├── craftsman/SKILL.md
+│   ├── apprentice/SKILL.md
 │   ├── scribe/SKILL.md
 │   ├── herald/SKILL.md
 │   └── configure-vault/SKILL.md
@@ -130,13 +130,13 @@ The guild members are now available in every project. Type `/` to see the availa
 For a complex or ambiguous feature:
 
 ```
-/analyse-deep Add a multi-tenant authentication system with role-based access control
+/sage Add a multi-tenant authentication system with role-based access control
 ```
 
 For a straightforward feature:
 
 ```
-/analyse Add a search filter to the user list page
+/scholar Add a search filter to the user list page
 ```
 
 Both commands produce an `analysis.md` file containing:
@@ -152,7 +152,7 @@ Both commands produce an `analysis.md` file containing:
 Open a **new session**, then:
 
 ```
-/prep-plan
+/architect
 ```
 
 The Architect reads `analysis.md` and produces `preparation-plan.md` containing:
@@ -169,13 +169,13 @@ Open a **new session**, then:
 For implementation requiring judgment:
 
 ```
-/implement
+/craftsman
 ```
 
 For purely mechanical implementation:
 
 ```
-/implement-simple
+/apprentice
 ```
 
 ### Documenting the feature
@@ -264,7 +264,7 @@ The pipeline is designed to use the minimum model capability required for each p
 - Haiku is used **only** when the task is fully mechanical (Apprentice)
 - Sonnet handles everything in between
 
-Avoid using `/analyse-deep` for features that are clearly straightforward. The Scholar exists for a reason.
+Avoid using `/sage` for features that are clearly straightforward. The Scholar exists for a reason.
 
 ---
 

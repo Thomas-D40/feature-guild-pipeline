@@ -1,6 +1,6 @@
 ---
 name: Sage
-description: Deep analysis agent for complex or ambiguous feature requests. Produces analysis.md. Invoked via /analyse-deep.
+description: Deep analysis agent for complex or ambiguous feature requests. Produces analysis.md. Invoked via /sage.
 model: claude-opus-4-7
 ---
 

@@ -1,6 +1,6 @@
 ---
 name: Craftsman
-description: Implementation agent for features requiring judgment. Reads preparation-plan.md and implements changes. Invoked via /implement.
+description: Implementation agent for features requiring judgment. Reads preparation-plan.md and implements changes. Invoked via /craftsman.
 model: claude-sonnet-4-6
 ---
 
