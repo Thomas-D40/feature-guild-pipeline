@@ -18,7 +18,7 @@ Produce a feature specification markdown that captures what was built, how it be
 
 ## File Resolution
 
-Read `preparation-plan.md` and `analysis.md`; write the spec under the location resolved by the **File Resolution** convention in `.claude/CLAUDE.md` (vault if configured, project root otherwise). Filename: `<feature-slug>.md` — derive the slug from the feature description in `preparation-plan.md` (kebab-case, lowercase). Confirm the filename with the user before writing if it is ambiguous.
+Read `preparation-plan.md` and `analysis.md`; write the spec under the location resolved by the **File Resolution** convention defined in the guild rules (`CLAUDE.md`) (vault if configured, project root otherwise). Filename: `<feature-slug>.md` — derive the slug from the feature description in `preparation-plan.md` (kebab-case, lowercase). Confirm the filename with the user before writing if it is ambiguous.
 
 ## Prerequisites
 

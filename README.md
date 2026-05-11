@@ -67,27 +67,27 @@ The guild is installed once, globally. Agents and skills are then available in e
 ```bash
 # macOS / Linux
 git clone https://github.com/Thomas-D40/feature-guild-pipeline.git ~/tmp/guild
-cp -r ~/tmp/guild/.claude/agents ~/.claude/agents
-cp -r ~/tmp/guild/.claude/skills ~/.claude/skills
+mkdir -p ~/.claude/agents ~/.claude/skills
+cp -r ~/tmp/guild/.claude/agents/. ~/.claude/agents/
+cp -r ~/tmp/guild/.claude/skills/. ~/.claude/skills/
+cat ~/tmp/guild/.claude/CLAUDE.md >> ~/.claude/CLAUDE.md
 rm -rf ~/tmp/guild
 ```
 
 ```powershell
 # Windows
 git clone https://github.com/Thomas-D40/feature-guild-pipeline.git $env:TEMP\guild
-Copy-Item -Recurse "$env:TEMP\guild\.claude\agents" "$env:USERPROFILE\.claude\agents"
-Copy-Item -Recurse "$env:TEMP\guild\.claude\skills" "$env:USERPROFILE\.claude\skills"
+New-Item -ItemType Directory -Force -Path "$env:USERPROFILE\.claude\agents" | Out-Null
+New-Item -ItemType Directory -Force -Path "$env:USERPROFILE\.claude\skills" | Out-Null
+Copy-Item -Recurse -Force "$env:TEMP\guild\.claude\agents\*" "$env:USERPROFILE\.claude\agents\"
+Copy-Item -Recurse -Force "$env:TEMP\guild\.claude\skills\*" "$env:USERPROFILE\.claude\skills\"
+Get-Content "$env:TEMP\guild\.claude\CLAUDE.md" | Add-Content "$env:USERPROFILE\.claude\CLAUDE.md"
 Remove-Item -Recurse "$env:TEMP\guild"
 ```
 
-### Step 2 — Add the pipeline rules to your global CLAUDE.md
+This places agents and skills under your global Claude config, then appends the guild rules (pipeline table, File Resolution convention, interview protocol) to your global `CLAUDE.md`. If you already have a global `CLAUDE.md`, open it afterwards and verify the appended block reads well next to your existing rules — no merging is performed.
 
-Append the contents of `.claude/CLAUDE.md` from this repo to your global Claude config file:
-
-- macOS / Linux: `~/.claude/CLAUDE.md`
-- Windows: `%USERPROFILE%\.claude\CLAUDE.md`
-
-### Step 3 — Verify the structure
+### Step 2 — Verify the structure
 
 Your global Claude config directory should contain:
 
@@ -113,7 +113,7 @@ Your global Claude config directory should contain:
 └── CLAUDE.md       (with guild rules appended)
 ```
 
-### Step 4 — Open Claude Code in any project
+### Step 3 — Open Claude Code in any project
 
 ```bash
 claude

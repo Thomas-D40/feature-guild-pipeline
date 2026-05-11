@@ -19,7 +19,7 @@ Always respond in the language the user is writing in.
 
 ## File Resolution
 
-`preparation-plan.md` (read), `analysis.md` (read, optional), `ISSUES.md` (write if blocked), and `pr-description.md` (write) resolve their location through the **File Resolution** convention in `.claude/CLAUDE.md` (vault if configured, project root otherwise).
+`preparation-plan.md` (read), `analysis.md` (read, optional), `ISSUES.md` (write if blocked), and `pr-description.md` (write) resolve their location through the **File Resolution** convention defined in the guild rules (`CLAUDE.md`) (vault if configured, project root otherwise).
 
 ## Prerequisites
 

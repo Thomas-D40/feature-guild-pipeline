@@ -18,7 +18,7 @@ Read `analysis.md` and produce `preparation-plan.md`. This document must be comp
 
 ## File Resolution
 
-Both `analysis.md` (read) and `preparation-plan.md` (write), as well as `ISSUES.md`, resolve their location through the **File Resolution** convention in `.claude/CLAUDE.md` (vault if configured, project root otherwise). Create the target directory if it does not exist.
+Both `analysis.md` (read) and `preparation-plan.md` (write), as well as `ISSUES.md`, resolve their location through the **File Resolution** convention defined in the guild rules (`CLAUDE.md`) (vault if configured, project root otherwise). Create the target directory if it does not exist.
 
 ## Prerequisites
 
