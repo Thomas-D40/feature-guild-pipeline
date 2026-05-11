@@ -10,11 +10,11 @@ A structured Claude Code workflow that routes feature requests through specializ
 
 | Phase | Command | Agent | Model |
 |-------|---------|-------|-------|
-| Deep analysis | `/analyse-deep` | Sage | Opus |
-| Light analysis | `/analyse` | Scholar | Sonnet |
-| Planning | `/prep-plan` | Architect | Sonnet |
-| Implementation | `/implement` | Craftsman | Sonnet |
-| Simple implementation | `/implement-simple` | Apprentice | Haiku |
+| Deep analysis | `/sage` | Sage | Opus |
+| Light analysis | `/scholar` | Scholar | Sonnet |
+| Planning | `/architect` | Architect | Sonnet |
+| Implementation | `/craftsman` | Craftsman | Sonnet |
+| Simple implementation | `/apprentice` | Apprentice | Haiku |
 | Documentation | `/scribe` | Scribe | Sonnet |
 | PR description | `/herald` | Herald | Sonnet |
 

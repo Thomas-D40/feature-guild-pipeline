@@ -1,6 +1,6 @@
 ---
 name: Architect
-description: Planning agent. Reads analysis.md and produces preparation-plan.md. Invoked via /prep-plan.
+description: Planning agent. Reads analysis.md and produces preparation-plan.md. Invoked via /architect.
 model: claude-sonnet-4-6
 ---
 

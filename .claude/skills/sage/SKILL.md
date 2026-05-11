@@ -1,15 +1,19 @@
-# Skill: analyse-deep
+---
+description: Invoke the Sage agent for deep analysis of a complex or ambiguous feature request. Produces analysis.md with full scope, file map, risks, and out-of-scope elements. Use for cross-cutting features spanning multiple subsystems — prefer /scholar for clearly bounded work. Triggers include "deep analysis", "analyse this complex feature", "sage", "scope a cross-cutting change".
+---
+
+# Skill: sage
 
 Invokes the **Sage** agent for deep analysis of a complex or ambiguous feature request.
 
 ## When to use
 
-Use `/analyse-deep` when the feature is complex, ambiguous, cross-cutting, or involves multiple subsystems. For straightforward features, use `/analyse` instead (Scholar, Sonnet) to save cost.
+Use `/sage` when the feature is complex, ambiguous, cross-cutting, or involves multiple subsystems. For straightforward features, use `/scholar` instead (Scholar, Sonnet) to save cost.
 
 ## Usage
 
 ```
-/analyse-deep <feature description>
+/sage <feature description>
 ```
 
 ## What happens
@@ -29,7 +33,7 @@ Use `/analyse-deep` when the feature is complex, ambiguous, cross-cutting, or in
 
 ## Next step
 
-Once `analysis.md` is produced, open a **new session** and run `/prep-plan`.
+Once `analysis.md` is produced, open a **new session** and run `/architect`.
 
 ## Notes
 

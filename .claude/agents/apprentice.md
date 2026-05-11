@@ -1,6 +1,6 @@
 ---
 name: Apprentice
-description: Implementation agent for mechanical tasks with minor interpretation latitude. Reads preparation-plan.md and applies changes, deferring to Craftsman for structural decisions. Invoked via /implement-simple.
+description: Implementation agent for mechanical tasks with minor interpretation latitude. Reads preparation-plan.md and applies changes, deferring to Craftsman for structural decisions. Invoked via /apprentice.
 model: claude-haiku-4-5-20251001
 ---
 

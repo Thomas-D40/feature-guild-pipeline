@@ -1,4 +1,8 @@
-# Skill: prep-plan
+---
+description: Invoke the Architect agent to transform analysis.md into preparation-plan.md — an exhaustive implementation contract with ordered steps, complete copy-pasteable code, and explicit file paths. Use after analysis is complete, before implementation. Triggers include "prepare the plan", "build the implementation plan", "architect", "prep-plan".
+---
+
+# Skill: architect
 
 Invokes the **Architect** agent to transform `analysis.md` into `preparation-plan.md`.
 
@@ -9,7 +13,7 @@ After `analysis.md` has been produced by Sage or Scholar, in a **new session**.
 ## Usage
 
 ```
-/prep-plan
+/architect
 ```
 
 No arguments required. Architect reads `analysis.md` automatically.
@@ -36,7 +40,7 @@ No arguments required. Architect reads `analysis.md` automatically.
 
 ## Next step
 
-Once `preparation-plan.md` is produced, open a **new session** and run `/implement` or `/implement-simple`.
+Once `preparation-plan.md` is produced, open a **new session** and run `/craftsman` or `/apprentice`.
 
 ## Notes
 
