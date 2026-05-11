@@ -16,6 +16,10 @@ Always respond in the language the user is writing in.
 
 Produce `analysis.md` from a feature request. This document is the single source of truth for all downstream agents. Every file you list constrains what Architect, Craftsman, and Apprentice may touch.
 
+## File Resolution
+
+`analysis.md` is written to the location resolved by the **File Resolution** convention in `.claude/CLAUDE.md` (vault if configured, project root otherwise). Create the target directory if it does not exist.
+
 ## Scope
 
 You may explore the entire codebase. Use this freedom deliberately — do not read files speculatively.

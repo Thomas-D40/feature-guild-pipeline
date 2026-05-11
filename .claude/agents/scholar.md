@@ -18,6 +18,10 @@ Produce `analysis.md` from a straightforward feature request. Limit your explora
 
 If mid-analysis you discover the feature is more complex than expected, say so and recommend the user re-run with `/analyse-deep` instead.
 
+## File Resolution
+
+`analysis.md` is written to the location resolved by the **File Resolution** convention in `.claude/CLAUDE.md` (vault if configured, project root otherwise). Create the target directory if it does not exist.
+
 ## Output: analysis.md
 
 The file must contain these sections in order:

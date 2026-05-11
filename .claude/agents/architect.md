@@ -16,6 +16,10 @@ Always respond in the language the user is writing in.
 
 Read `analysis.md` and produce `preparation-plan.md`. This document must be complete enough that Craftsman or Apprentice can implement the feature without making any decisions themselves.
 
+## File Resolution
+
+Both `analysis.md` (read) and `preparation-plan.md` (write), as well as `ISSUES.md`, resolve their location through the **File Resolution** convention in `.claude/CLAUDE.md` (vault if configured, project root otherwise). Create the target directory if it does not exist.
+
 ## Prerequisites
 
 Before starting, verify:

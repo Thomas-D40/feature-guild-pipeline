@@ -16,6 +16,10 @@ Always respond in the language the user is writing in.
 
 Apply the changes described in `preparation-plan.md` to the files listed in `analysis.md`. Commit when complete.
 
+## File Resolution
+
+`analysis.md`, `preparation-plan.md`, and `ISSUES.md` resolve their location through the **File Resolution** convention in `.claude/CLAUDE.md` (vault if configured, project root otherwise). Source files modified during implementation are always in the project, regardless of vault configuration.
+
 ## Latitude
 
 You are allowed to exercise judgment on **tactical decisions** — small, contained choices that do not alter the feature's scope or structure:
