@@ -49,61 +49,65 @@ Each phase runs in its own Claude Code session. Sessions are never carried over 
 
 ## Installation
 
+The guild is installed once, globally. Agents and skills are then available in every project without any per-project setup.
+
 ### Prerequisites
 
 - [Claude Code](https://claude.ai/code) installed and authenticated
-- A GitHub account (to clone this repo)
 
-### Step 1 — Clone the repository
-
-```bash
-# For global use across all your projects
-git clone https://github.com/YOUR_USERNAME/feature-guild-pipeline.git ~/.claude/feature-guild-pipeline
-
-# Or clone it locally inside a specific project
-git clone https://github.com/YOUR_USERNAME/feature-guild-pipeline.git .claude
-```
-
-### Step 2 — Copy the guild configuration
-
-If you cloned globally, copy the `.claude` folder into your project:
+### Step 1 — Clone into your global Claude config
 
 ```bash
-cp -r ~/.claude/feature-guild-pipeline/.claude /path/to/your/project/.claude
+# macOS / Linux
+git clone https://github.com/YOUR_USERNAME/feature-guild-pipeline.git ~/tmp/guild
+cp -r ~/tmp/guild/.claude/agents ~/.claude/agents
+cp -r ~/tmp/guild/.claude/skills ~/.claude/skills
+rm -rf ~/tmp/guild
 ```
 
-If you cloned directly into your project as `.claude`, you are ready.
+```powershell
+# Windows
+git clone https://github.com/YOUR_USERNAME/feature-guild-pipeline.git $env:TEMP\guild
+Copy-Item -Recurse "$env:TEMP\guild\.claude\agents" "$env:USERPROFILE\.claude\agents"
+Copy-Item -Recurse "$env:TEMP\guild\.claude\skills" "$env:USERPROFILE\.claude\skills"
+Remove-Item -Recurse "$env:TEMP\guild"
+```
+
+### Step 2 — Add the pipeline rules to your global CLAUDE.md
+
+Append the contents of `.claude/CLAUDE.md` from this repo to your global Claude config file:
+
+- macOS / Linux: `~/.claude/CLAUDE.md`
+- Windows: `%USERPROFILE%\.claude\CLAUDE.md`
 
 ### Step 3 — Verify the structure
 
-Your project should contain:
+Your global Claude config directory should contain:
 
 ```
-your-project/
-└── .claude/
-    ├── agents/
-    │   ├── sage.md
-    │   ├── scholar.md
-    │   ├── architect.md
-    │   ├── craftsman.md
-    │   └── apprentice.md
-    ├── skills/
-    │   ├── analyse-deep/SKILL.md
-    │   ├── analyse/SKILL.md
-    │   ├── prep-plan/SKILL.md
-    │   ├── implement/SKILL.md
-    │   └── implement-simple/SKILL.md
-    └── CLAUDE.md
+~/.claude/          (or %USERPROFILE%\.claude\ on Windows)
+├── agents/
+│   ├── sage.md
+│   ├── scholar.md
+│   ├── architect.md
+│   ├── craftsman.md
+│   └── apprentice.md
+├── skills/
+│   ├── analyse-deep/SKILL.md
+│   ├── analyse/SKILL.md
+│   ├── prep-plan/SKILL.md
+│   ├── implement/SKILL.md
+│   └── implement-simple/SKILL.md
+└── CLAUDE.md       (with guild rules appended)
 ```
 
-### Step 4 — Open Claude Code in your project
+### Step 4 — Open Claude Code in any project
 
 ```bash
-cd your-project
 claude
 ```
 
-The guild members are now available. Type `/` to see the available commands.
+The guild members are now available in every project. Type `/` to see the available commands.
 
 ---
 
@@ -166,7 +170,11 @@ For purely mechanical implementation:
 
 ## Interview Protocol
 
-Before any agent writes to `ISSUES.md`, it enters **interview mode**:
+All agents resolve blockers through conversation before taking any other action.
+
+**Sage and Scholar** never write to `ISSUES.md`. If they hit a blocker they cannot resolve from the codebase, they ask you. If you don't have the answer, they produce `analysis.md` anyway and mark the uncertain areas with `⚠ Uncertain` so the next phase knows where gaps exist.
+
+**Architect, Craftsman, and Apprentice** follow the full escalation path:
 
 1. The agent states the issue clearly
 2. It asks you 1–3 targeted questions that could resolve the problem
@@ -188,7 +196,7 @@ The implementation contract. Must contain exhaustive code — not descriptions �
 
 ### ISSUES.md
 
-The escalation surface. Any agent that cannot proceed writes here after attempting the interview protocol, then halts rather than interpreting or improvising.
+The escalation surface for planning and implementation phases. Architect, Craftsman, and Apprentice write here after attempting the interview protocol, then halt rather than interpreting or improvising. Sage and Scholar never write to this file.
 
 ---
 
